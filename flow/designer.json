@@ -1,0 +1,112 @@
+{
+	"tabs": [
+		{
+			"id": "1551338900740",
+			"name": "Main",
+			"icon": "fa-object-ungroup",
+			"linker": "main",
+			"index": 0
+		}
+	],
+	"components": [
+		{
+			"id": "1625202092471",
+			"component": "mqtt",
+			"tab": "1551338900740",
+			"name": "ZCEQA_52.158.250.92",
+			"reference": "mqttZCEQA",
+			"x": 135,
+			"y": 181,
+			"connections": {
+				"99": [
+					{
+						"index": "0",
+						"id": "1625202257466"
+					}
+				]
+			},
+			"disabledio": {
+				"input": [],
+				"output": []
+			},
+			"state": {
+				"text": "Connected",
+				"color": "green"
+			},
+			"color": "#4285F4",
+			"notes": "",
+			"options": {
+				"host": "52.158.250.92",
+				"port": "8082",
+				"auth": true,
+				"username": "ZCEmqtt",
+				"password": "zeitermqtt",
+				"id": "ZCEmqtt@52.158.250.92:8082",
+				"clientid": "254254326345"
+			}
+		},
+		{
+			"id": "1625202257466",
+			"component": "debug",
+			"tab": "1551338900740",
+			"name": "Debug",
+			"x": 512,
+			"y": 275,
+			"connections": {},
+			"disabledio": {
+				"input": [],
+				"output": []
+			},
+			"state": {
+				"text": "Enabled",
+				"color": "gray"
+			},
+			"color": "#967ADC",
+			"notes": "",
+			"options": {
+				"enabled": true,
+				"repository": false,
+				"type": "data"
+			}
+		},
+		{
+			"id": "1625202628016",
+			"component": "mqttsubscribe",
+			"tab": "1551338900740",
+			"name": "MQTT subscribe",
+			"reference": "StatusAll",
+			"x": 116,
+			"y": 341,
+			"connections": {
+				"0": [
+					{
+						"index": "0",
+						"id": "1625202257466"
+					}
+				],
+				"99": [
+					{
+						"index": "0",
+						"id": "1625202257466"
+					}
+				]
+			},
+			"disabledio": {
+				"input": [],
+				"output": []
+			},
+			"state": {
+				"text": "Connected",
+				"color": "green"
+			},
+			"color": "#8B8B8B",
+			"notes": "",
+			"options": {
+				"broker": "ZCEmqtt@52.158.250.92:8082",
+				"topic": "ZCE/3/+/Status",
+				"qos": "0"
+			}
+		}
+	],
+	"version": 623
+}
