@@ -4,12 +4,18 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"dependencies": {
-		"total4": "latest"
+		"mosca": "^2.8.3",
+		"node-schedule": "^2.0.0",
+		"total4": "latest",
+		"xlsx": "^0.17.0"
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-	"keywords": ["empty", "project"],
+	"keywords": [
+		"empty",
+		"project"
+	],
 	"author": "Peter Širka",
 	"license": "MIT"
 }
